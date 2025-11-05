@@ -1,7 +1,0 @@
-{
-  "scripts": {
-    "build:sdk": "esbuild src/sdk-entry.js --bundle --platform=browser --format=esm --outfile=public/vendor/discord/discord-sdk.js",
-    "build:app": "esbuild src/main.js --bundle --platform=browser --format=esm --outfile=public/app.js",
-    "build": "npm run build:sdk && npm run build:app"
-  }
-}
