@@ -1,22 +1,22 @@
 // --- Detect if running inside a Discord Activity iframe ---
 //import { DiscordSDK } from "/vendor/discord/output/index.mjs"; 
-import { DiscordSDK } from " https://unpkg.com/@discord/embedded-app-sdk"; 
+// import { DiscordSDK } from "https://unpkg.com/@discord/embedded-app-sdk"; 
 
 
-const params = new URLSearchParams(window.location.search);
-const inDiscord =
-  params.has("frame_id") ||                // official param from Discord
-  (window.parent !== window && /Discord/i.test(navigator.userAgent)); // heuristic
+// const params = new URLSearchParams(window.location.search);
+// const inDiscord =
+//   params.has("frame_id") ||                // official param from Discord
+//   (window.parent !== window && /Discord/i.test(navigator.userAgent)); // heuristic
 
-let discordSdk = null;
+// let discordSdk = null;
 
-// Only import & initialize the SDK when inside Discord
-async function setupDiscordSdk() {
-  if (inDiscord) return;
-  // Import ESM build (or use your bundler)
-  discordSdk = new DiscordSDK("1435462812540600520");
-  await discordSdk.ready();
-}
+// // Only import & initialize the SDK when inside Discord
+// async function setupDiscordSdk() {
+//   if (inDiscord) return;
+//   // Import ESM build (or use your bundler)
+//   discordSdk = new DiscordSDK("1435462812540600520");
+//   await discordSdk.ready();
+// }
 
 
 
@@ -65,7 +65,7 @@ function showBanner(msg, type = "warning") {
 // Initialize Unity
 (async () => {
 try {
-  await setupDiscordSdk();
+  //await setupDiscordSdk();
   await loadUnityLoader();
   const instance = await createUnityInstance(canvas, config, (progress) => {
     if (loading) loading.textContent = `Loading… ${Math.round(progress * 100)}%`;
