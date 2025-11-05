@@ -1,5 +1,5 @@
 // --- Detect if running inside a Discord Activity iframe ---
-import { DiscordSDK } from "/node_modules/@discord/embedded-app-sdk";
+import { DiscordSDK } from "/vendor/discord/output/index.mjs"; 
 
 
 const params = new URLSearchParams(window.location.search);
