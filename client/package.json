@@ -9,10 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@discord/embedded-app-sdk": "^2.4.0",
+    "esbuild": "^0.25.12",
     "vite": "^5.0.8"
   },
   "dependencies": {
-    "@discord/embedded-app-sdk": "^2.4.0",
     "unity-webgl": "^4.4.3"
   }
 }
